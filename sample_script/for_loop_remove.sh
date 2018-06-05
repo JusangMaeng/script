@@ -5,6 +5,6 @@ list=(3dmali bluez-tools commonapi gst-plugins-itapi gstreamer_mediaplay iptv ke
 for i in "${list[@]}"
 do
 	cd $i
-	rm -rf "./!(.git)"
+	rm -rf *
 	cd -
 done
