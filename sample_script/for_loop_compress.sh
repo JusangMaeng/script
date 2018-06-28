@@ -4,7 +4,6 @@ list=(3dmali bluez-tools commonapi gst-plugins-itapi gstreamer_mediaplay iptv ke
 
 for i in "${list[@]}"
 do
-	cd $i/git
-	rm -rf * ./!\(.git\)
-	cd -
+	tar zcf ${i}.tar.gz ${i}
 done
+
