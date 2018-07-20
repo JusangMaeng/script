@@ -13,6 +13,10 @@ if [ $num -eq 1 ]; then
 	echo $num eq 1
 fi
 
+if [ $num -ne 0 ]; then
+	echo $num ne 0
+fi
+
 if [ $num -gt 0 ]; then
 	echo "$num > 0"
 fi
