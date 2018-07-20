@@ -39,12 +39,16 @@ fi
 
 str=""
 if [ -z $str ]; then
-	echo "str size is 0"
+	echo "str size is 0 and NULL"
 fi
 
-str="s"
+str=""
 if [ -n $str ]; then
-	echo "str size is not 0"
+	echo "str size is not NULL str:$str"
+fi
+str="test"
+if [ -n $str ]; then
+	echo "str size is not NULL str:$str"
 fi
 
 #file and folder
