@@ -3,9 +3,32 @@
 Blue='\033[0;34m'
 NC='\033[0m' # No Color
 
+TAG_NAMING="cls_v2.0_sgit_update_20180801"
 
-list=(3dmali bluez-tools commonapi gst-plugins-itapi gstreamer_mediaplay iptv kernel prebuilt  system-api tccbox tcc_launcher tclog tcresource tdd-prebuilt teleplayer tms-prebuilt u-boot tools docs simpleplayer jp-factory mediafx)
-TAG_NAMING="cls_v2.0_sgit_update_20180731"
+list=(\
+	3dmali \
+	bluez-tools \
+	commonapi \
+	gst-plugins-itapi \
+	gstreamer_mediaplay \
+	iptv \
+	kernel \
+	prebuilt \
+	system-api \
+	tccbox \
+	tcc_launcher \
+	tclog tcresource \
+	tdd-prebuilt \
+	teleplayer \
+	tms-prebuilt \
+	u-boot \
+	tools \
+	docs \
+	simpleplayer \
+	jp-factory \
+	mediafx \
+	tc_bluetooth \
+	)
 
 check_tag()
 {
