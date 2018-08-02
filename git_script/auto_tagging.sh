@@ -5,7 +5,7 @@
 
 #get latest tagging name
 #latest_tag=`git describe --abbrev=0 --tags`
-latest_tag=`git tag | sort -n | grep '^v' | tail -1`
+latest_tag=`git tag | sort -V | grep '^v' | tail -1`
 
 #parsiong with '.'
 version_split=(${latest_tag//./ })
@@ -25,7 +25,6 @@ if [ -z "$latest_commit_tag" ]; then
     git tag $next_tag
     git push --tags
 else
-	echo "latst commit : $latest_commit, tag by latest commit : $latest_commit_tag"
     echo "There has been tagged at latest commit. It dosen't do anything."
 fi
 
