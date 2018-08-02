@@ -5,7 +5,7 @@
 
 #get latest tagging name
 #latest_tag=`git describe --abbrev=0 --tags`
-latest_tag=`git tag -l --points-at HEAD | grep v`
+latest_tag=`git tag | sort -n | grep '^v' | tail -1`
 
 #parsiong with '.'
 version_split=(${latest_tag//./ })
