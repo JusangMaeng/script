@@ -6,6 +6,8 @@ list=(\
 	commonapi \
 	gst-plugins-itapi \
 	gstreamer_mediaplay \
+	gst-plugins-telechips \
+	gst-telechips-cdk \
 	iptv \
 	kernel \
 	prebuilt \

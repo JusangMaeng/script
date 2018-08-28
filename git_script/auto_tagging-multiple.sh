@@ -3,13 +3,15 @@
 Blue='\033[0;34m'
 NC='\033[0m' # No Color
 
-TAG_NAMING="cls_v2.0_sgit_update_20180801"
+TAG_NAMING="cls_v2.0_sgit_update_20180824"
 
 list=(\
 	3dmali \
 	bluez-tools \
 	commonapi \
 	gst-plugins-itapi \
+	gst-plugins-telechips \
+	gst-telechips-cdk \
 	gstreamer_mediaplay \
 	iptv \
 	kernel \
