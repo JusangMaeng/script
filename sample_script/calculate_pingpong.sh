@@ -13,38 +13,40 @@ screen_height=1080
 
 
 scroll_h=10
-turn_down=0
+turn_up=1
 
-min_height=1080
-max_height=30
+min_height=30
+max_height=1080
 
-func_up()
+func_down()
 {
 	screen_y=`expr $screen_y - $scroll_h`
 	screen_height=`expr $screen_height + $scroll_h`
 	echo "setdisp $orgx $orgy $orgwdith $screen_height $screen_x $screen_y $screen_wdith $screen_height"
+	if [ $screen_height -ge $max_height ]; then # ge >= le <=
+		turn_up=1
+		echo "up"
+	fi
 }
 
-func_down()
+func_up()
 {
 	screen_y=`expr $screen_y + $scroll_h`
 	screen_height=`expr $screen_height - $scroll_h`
 	echo "setdisp $orgx $orgy $orgwdith $screen_height $screen_x $screen_y $screen_wdith $screen_height"
+	if [ $screen_height -le $min_height ]; then # ge >= le <=
+		turn_up=0
+		echo "down"
+	fi
 }
 
 while [ TRUE ] ; do
-	if [ $screen_y -ge $min_height ]; then
-		turn_down=1
-	elif [ $screen_y -le $max_height ]; then
-		turn_down=0
-	fi
-	
-	if [ $turn_down -eq 1 ]; then
+	if [ $turn_up -eq 1 ]; then
 		func_up
-		sleep 0.1
+		sleep 0.05
 	else
 		func_down
-		sleep 0.1
+		sleep 0.05
 	fi
 done
 
