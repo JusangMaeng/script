@@ -15,3 +15,8 @@ for i in $(eval echo "{$START..$END}"); do
 	echo $i
 done
 
+arr1=(one two three)
+for i in ${!arr1[@]}; do
+	echo $i
+	echo ${arr1[$i]}
+done
